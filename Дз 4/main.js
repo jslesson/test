@@ -84,7 +84,7 @@ let mainList = {
 		}	
 	}
 }
-// mainList.chooseShopItems();
+
 mainList.shopItems.forEach(function(item,i,arr) {
 	console.log(++i + ': ' + item + '(массив:' + arr + ')');
 })
