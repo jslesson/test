@@ -24,6 +24,10 @@ employers_btn.disabled = true;
 count.disabled = true;
 
 open.addEventListener('click', () => {
+	setTimeout(start, 2000);
+});
+
+function start () {
 	money = prompt("Ваш бюджет на месяц?", "");
 
 	while (isNaN(money) || money == '' || money == null) {
@@ -35,7 +39,7 @@ open.addEventListener('click', () => {
 	name_value.textContent = prompt("Название вашего магазина?", "").toUpperCase();
 
 	budget_btn.disabled = false;
-});
+}
 
 for(let i = 0; i < goods_item.length; i++) {
 

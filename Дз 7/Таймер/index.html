@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Таймер</title>
+</head>
+<body>
+	
+	<div id="time"></div>
+
+	<script>
+
+	  function timer() {
+	    let date = new Date(),
+	    	  hours = date.getHours(),
+	    	  minutes = date.getMinutes(),
+	    	  seconds = date.getSeconds(),
+	    	  time = document.getElementById("time");
+
+	    if (hours < 10) {
+	    	hours = "0" + hours;
+	    } 
+	    if (minutes < 10) {
+	    	minutes = "0" + minutes;
+	    } 
+	    if (seconds < 10) {
+	    	seconds = "0" + seconds;
+	    } 
+
+	    time.innerHTML = hours + ":" + minutes + ":" + seconds;
+	    setTimeout(timer, 1000);
+	  }
+
+	  timer();
+
+	</script>
+
+</body>
+</html>
